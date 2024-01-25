@@ -11,7 +11,7 @@ const options = {
 }
 
 // api  link 
-const ApiUrl = "https://api.api-ninjas.com/v1/dadjokes?limit=1"
+const apiUrl = "https://api.api-ninjas.com/v1/dadjokes?limit=1"
 
 // random joke in api
 
@@ -19,7 +19,7 @@ async function getJoke() {
     Joke.innerText = "Updating..."
     TellJokeBtn.disabled = true;
     TellJokeBtn.innerText = "Loading..."
-    const response = await fetch(ApiUrl, options);
+    const response = await fetch(apiUrl, options);
     const data = await response.json();
     Joke.innerText = data[0].joke
 
